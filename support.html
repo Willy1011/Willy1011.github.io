@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>William's Support Page</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1180616572759441439/1187392405155106866/IMG_4263-modified.png?ex=6596b85a&is=6584435a&hm=b0e4a163982236be290834f8c98a4b5ab0a7dc2c998ce697f750ec017e3a058f&" sizes="16x16">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      background-color: #ADD8E6;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      transition: background 0.5s ease-in-out;
+    }
+
+    .form-container {
+      max-width: 400px;
+      width: 100%;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      color: #333;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      box-sizing: border-box;
+      color: #333;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    .link-container {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .link {
+      margin: 10px;
+      padding: 10px 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      display: flex;
+      align-items: center;
+      color: #333;
+    }
+
+    .link-icon {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+
+    a.home {
+      color: #333;
+    }
+
+    a.home:hover {
+      background: #333;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #333, 0 0 25px #333, 0 0 50px #333, 0 0 100px #333;
+    }
+  </style>
+</head>
+
+<body class="dark">
+  <div class="container">
+    <h2>Contact Support</h2>
+    <div class="form-container">
+      <form action="https://formspree.io/f/xrgnzrny" method="POST">
+        <label for="email">Your Email:</label>
+        <input type="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea name="message" rows="4" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="link-container">
+      <a href="index.html" class="link home">
+        <i class="fas fa-home link-icon"></i>
+        Home
+      </a>
+    </div>
+    <div class="credit">Made By: William Holley © 2024</div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+
+</html>

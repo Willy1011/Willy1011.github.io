@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>William's Home Page</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png"
+    href="https://cdn.discordapp.com/attachments/1180616572759441439/1187392405155106866/IMG_4263-modified.png?ex=6596b85a&is=6584435a&hm=b0e4a163982236be290834f8c98a4b5ab0a7dc2c998ce697f750ec017e3a058f&"
+    sizes="16x16">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      background-color: #ADD8E6; /* Light Blue */
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .profile-picture {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 100px;
+      height: 100px;
+      border: 2px solid #333;
+    }
+
+    .profile-picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-name {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .link-container {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    body.dark {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .link-icon {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+
+    .link {
+      margin: 10px;
+      padding: 10px 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Sort buttons by order requested (Discord to Support) */
+    .link:nth-child(1) { order: 1; } /* Discord */
+    .link:nth-child(2) { order: 2; } /* Instagram */
+    .link:nth-child(3) { order: 3; } /* YouTube */
+    .link:nth-child(4) { order: 4; } /* TikTok */
+    .link:nth-child(5) { order: 5; } /* Twitch */
+    .link:nth-child(6) { order: 6; } /* GitHub */
+    .link:nth-child(7) { order: 7; } /* Reddit */
+    .link:nth-child(8) { order: 8; } /* Support */
+
+    /* Individual styles for each button */
+    /* Discord */
+    a.discord {
+      color: #7289DA;
+    }
+
+    a.discord:hover {
+      background: #7289DA;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #7289DA, 0 0 25px #7289DA, 0 0 50px #7289DA, 0 0 100px #7289DA;
+    }
+
+    /* Instagram */
+    a.instagram {
+      color: #E1306C;
+    }
+
+    a.instagram:hover {
+      background: #E1306C;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #E1306C, 0 0 25px #E1306C, 0 0 50px #E1306C, 0 0 100px #E1306C;
+    }
+
+    /* YouTube */
+    a.youtube {
+      color: #FF0000;
+    }
+
+    a.youtube:hover {
+      background: #FF0000;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #FF0000, 0 0 25px #FF0000, 0 0 50px #FF0000, 0 0 100px #FF0000;
+    }
+
+    /* TikTok */
+    a.tiktok {
+      color: #FF4500;
+    }
+
+    a.tiktok:hover {
+      background: #FF4500;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #FF4500, 0 0 25px #FF4500, 0 0 50px #FF4500, 0 0 100px #FF4500;
+    }
+
+    /* Twitch */
+    a.twitch {
+      color: #6441A5;
+    }
+
+    a.twitch:hover {
+      background: purple;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px purple, 0 0 25px purple, 0 0 50px purple, 0 0 100px purple;
+    }
+
+    /* GitHub */
+    a.github {
+      color: #fff;
+    }
+
+    a.github:hover {
+      background: #fff;
+      color: #000;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #fff, 0 0 25px #fff, 0 0 50px #fff, 0 0 100px #fff;
+    }
+
+    /* Reddit */
+    a.reddit {
+      color: #FF4500;
+    }
+
+    a.reddit:hover {
+      background: #FF4500;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #FF4500, 0 0 25px #FF4500, 0 0 50px #FF4500, 0 0 100px #FF4500;
+    }
+
+    /* Support */
+    a.support {
+      color: #4CAF50;
+    }
+
+    a.support:hover {
+      background: #4CAF50;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #4CAF50, 0 0 25px #4CAF50, 0 0 50px #4CAF50, 0 0 100px #4CAF50;
+    }
+
+    /* Animation styles for button hover effect */
+    a span {
+      position: absolute;
+      display: block;
+    }
+
+    a span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #03e9f4);
+      animation: btn-anim1 1s linear infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="profile-picture">
+      <img
+        src="https://cdn.discordapp.com/attachments/1180616572759441439/1187392081480667146/IMG_4263.png?ex=6596b80c&is=6584430c&hm=5c9210f761a7d5e6646c6044&"
+        alt="Profile Picture">
+    </div>
+    <div class="profile-name">William</div>
+    <div class="link-container">
+      <a href="https://dsc.gg/qc-dev" class="link discord" target="_blank">
+        <i class="fab fa-discord link-icon"></i>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Discord
+      </a>
+      <a href="https://www.instagram.com/willy101111" class="link instagram" target="_blank">
+        <i class="fab fa-instagram link-icon"></i>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Instagram
+      </a>
+      <a href="https://www.youtube.com/channel/UCX2wv0rm5_tOHaEUwVQ9BgA" class="link youtube" target="_blank">
+        <i class="fab fa-youtube link-icon"></i>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        YouTube
+      </a>
+      <a href="https://www.tiktok.com/@willy14547" class="link tiktok" target="_blank">
+        <i class="fab fa-tiktok link-icon"></i>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        TikTok
+      </a>
+      <a href="https://www.twitch.tv/willy101_" class="link twitch" target="_blank">
+        <i class="fab fa-twitch link-icon"></i>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Twitch
+      </a>
+      <a href="https://github.com/Willy1011" class="link github" target="_blank">
+        <i class="fab fa-github link-icon"></i>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        GitHub
+      </a>
+      <a href="https://www.reddit.com/user/Willy1011_" class="link reddit" target="_blank">
+        <i class="fab fa-reddit link-icon"></i>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Reddit
+      </a>
+      <a href="support.html" class="link support" target="_blank">
+        <i class="fas fa-hands-helping link-icon"></i>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Support
+      </a>
+    </div>
+    <br>
+    <br>
+    <div class="credit">Made By: William Holley © 2024</div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+
+</html>
